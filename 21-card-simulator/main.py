@@ -5,7 +5,7 @@ def main():
     deck = csf.pickCards(numOfCards)
 
     numOfLoops = int(input("How many times do you want to stack the columns: "))
-    finalPos = (numOfCards // 3) + 4
+    finalPos = (numOfCards // 2)
 
     for i in range(numOfLoops):
         deck = cardLoop(deck)
