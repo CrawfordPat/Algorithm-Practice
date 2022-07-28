@@ -5,18 +5,18 @@ def main():
     deck = csf.pickCards(numOfCards)
 
     numOfLoops = int(input("How many times do you want to stack the columns: "))
+    finalPos = (numOfCards // 3) + 4
 
     for i in range(numOfLoops):
         deck = cardLoop(deck)
         print("\n")
 
-    userCard = str(input("Is your card the " + str(deck[10]) + " (y/n): "))
+    userCard = str(input("Is your card the " + str(deck[finalPos]) + " (y/n): "))
 
     if userCard == "y":
         print("Great!")
     else:
         print("Shoot!")
-
 
 def cardLoop(deck):
     col1, col2, col3 = csf.makeColumns(deck)
